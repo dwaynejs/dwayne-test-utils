@@ -4,7 +4,7 @@ const babel = require('rollup-plugin-babel');
 const inject = require('rollup-plugin-inject');
 
 module.exports = {
-  entry: './src/node.js',
+  entry: './src/browser.js',
   dest: './lib/browser.js',
   format: 'cjs',
   external: [
