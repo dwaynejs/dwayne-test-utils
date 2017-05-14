@@ -5,3 +5,6 @@ src/
 
 .babelrc
 .editorconfig
+
+rollup.browser.config.js
+rollup.node.config.js
