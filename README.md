@@ -40,6 +40,27 @@ describe('some test', () => {
 });
 ```
 
+##### test(done, testFn)
+
+The function calls `testFn` inside `try/catch` block. If the call
+was successful, `done` is called without arguments, and if it wasn't
+it's called with the error argument. Example:
+
+```js
+import { test } from 'dwayne-test-utils';
+import { strictEqual } from 'assert';
+
+describe('it should test events', () => {
+  it('should test something inside a callback', (done) => {
+    action(() => {
+      test(done, () => {
+        strictEqual(a, b);
+      });
+    });
+  });
+});
+```
+
 ##### deferTest(done, testFn, interval)
 
 The function calls `testFn` in `interval` milliseconds inside
